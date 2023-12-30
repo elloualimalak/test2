@@ -1,0 +1,24 @@
+<button onclick="calculate()">= Afficher le résultat</button>
+
+    <!-- Zone de réponse -->
+    <div id="result"></div>
+
+    <!-- Lien hypertexte pour afficher le résultat -->
+    <a href="javascript:void(0);" onclick="calculate()">Afficher le résultat</a>
+
+    <script>
+        function calculate() {
+            // Récupérer la valeur de la zone de saisie
+            var operationInput = document.getElementById("operation");
+            var operation = operationInput.value;
+
+            // Effectuer le calcul (vous devez implémenter votre propre logique de calcul ici)
+            var resultat = eval(operation);
+
+            // Afficher le résultat dans la zone de réponse
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Résultat : " + resultat;
+        }
+    </script>
+</body>
+</html>
